@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import type { User } from "prisma";
 
 @Injectable({
 	providedIn: "root",
@@ -12,9 +13,7 @@ export class UtilsService {
 		// This service can now make HTTP requests via `this.http`.
 	}
 
-	getUsers(): Observable<{ id: string; name: string }[]> {
-		return this.http.get<{ id: string; name: string }[]>(
-			`${this.API_URL}/users`,
-		);
+	getUsers(): Observable<User[]> {
+		return this.http.get<User[]>(`${this.API_URL}/users`);
 	}
 }

@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -20,15 +19,17 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
-      "ui": [
-        "./dist/ui"
-      ]
+      "@/*": ["src/*"],
+      "prisma": ["../prisma/node_modules/@prisma/client/*"]
     },
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "types": [
+      "../../prisma/node_modules/@prisma/client/index.d.ts",
+      "../../prisma/node_modules/@prisma/client/runtime/library.d.ts"
+    ],
+    "lib": ["ES2022", "dom"]
   },
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

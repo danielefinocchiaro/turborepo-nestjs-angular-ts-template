@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import type { User } from "@prisma/client";
+import type { User } from "prisma";
 // biome-ignore lint/style/useImportType: This is a bug in the ESLint plugin for Nx
 import { PrismaService } from "../prisma/prisma.service";
 
