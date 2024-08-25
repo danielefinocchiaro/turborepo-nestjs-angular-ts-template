@@ -135,7 +135,7 @@ importers:
     devDependencies:
       '@angular-devkit/build-angular':
         specifier: ^18.2.1
-        version: 18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@types/node@22.5.0)(chokidar@3.6.0)(jest@29.7.0(@types/node@22.5.0))(karma@6.4.4)(typescript@5.5.4)
+        version: 18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@types/node@22.5.0)(chokidar@3.6.0)(jest@29.7.0(@types/node@22.5.0))(karma@6.4.4)(ng-packagr@18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(tslib@2.7.0)(typescript@5.5.4))(typescript@5.5.4)
       '@angular/cli':
         specifier: ~18.2.1
         version: 18.2.1(chokidar@3.6.0)
@@ -163,6 +163,9 @@ importers:
       karma-jasmine-html-reporter:
         specifier: ~2.0.0
         version: 2.0.0(jasmine-core@4.6.1)(karma-jasmine@5.1.0(karma@6.4.4))(karma@6.4.4)
+      ng-packagr:
+        specifier: ^18.2.0
+        version: 18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(tslib@2.7.0)(typescript@5.5.4)
       typescript:
         specifier: ~5.5.4
         version: 5.5.4
@@ -1705,6 +1708,33 @@ packages:
   '@prisma/get-platform@5.18.0':
     resolution: {integrity: sha512-Tk+m7+uhqcKDgnMnFN0lRiH7Ewea0OEsZZs9pqXa7i3+7svS3FSCqDBCaM9x5fmhhkufiG0BtunJVDka+46DlA==}
 
+  '@rollup/plugin-json@6.1.0':
+    resolution: {integrity: sha512-EGI2te5ENk1coGeADSIwZ7G2Q8CJS2sF120T7jLw4xFw9n7wIOXHo+kIYRAoVpJAN+kmqZSoO3Fp4JtoNF4ReA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
+  '@rollup/plugin-node-resolve@15.2.3':
+    resolution: {integrity: sha512-j/lym8nf5E21LwBT4Df1VD6hRO2L2iwUeUmP7litikRsVp1H6NWx20NEp0Y7su+7XGc476GnXXc4kFeZNGmaSQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.78.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
+  '@rollup/pluginutils@5.1.0':
+    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+
   '@rollup/rollup-android-arm-eabi@4.20.0':
     resolution: {integrity: sha512-TSpWzflCc4VGAUJZlPpgAJE1+V60MePDQnBd7PPkpuEmOy8i87aL6tinFGKBFKuEDikYpig72QzdT3QPYIi+oA==}
     cpu: [arm]
@@ -1865,6 +1895,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@rollup/wasm-node@4.21.0':
+    resolution: {integrity: sha512-CqLrY1oc68dyB44h4qfAa/4LM+R+xvqaJSTBV0hWeLXiIdXhgrHlaalXOTrL5vWz+mgnyzlUgy3bhTkZjKt1LQ==}
+    engines: {node: '>=18.0.0', npm: '>=8.0.0'}
+    hasBin: true
+
   '@schematics/angular@18.2.1':
     resolution: {integrity: sha512-bBV7I+MCbdQmBPUFF4ECg37VReM0+AdQsxgwkjBBSYExmkErkDoDgKquwL/tH7stDCc5IfTd0g9BMeosRgDMug==}
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -2024,6 +2059,9 @@ packages:
 
   '@types/range-parser@1.2.7':
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
+
+  '@types/resolve@1.20.2':
+    resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
 
   '@types/retry@0.12.2':
     resolution: {integrity: sha512-XISRgDJ2Tc5q4TRqvgJtzsRkFYNJzZrhTdtMoGVBttwzzQJkPnS3WWTFc7kuDRoPtPakl+T+OfdEUjYJj7Jbow==}
@@ -2377,6 +2415,10 @@ packages:
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
 
+  builtin-modules@3.3.0:
+    resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
+    engines: {node: '>=6'}
+
   bundle-name@4.1.0:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
@@ -2528,6 +2570,10 @@ packages:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
 
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
+
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
@@ -2541,6 +2587,9 @@ packages:
 
   common-path-prefix@3.0.0:
     resolution: {integrity: sha512-QE33hToZseCH3jS0qN96O/bSh3kaw/h+Tq7ngyY9eWDUnTlTNUyqfqvCXioLe5Na5jFsL78ra/wuBU4iuEgd4w==}
+
+  commondir@1.0.1:
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
 
   component-emitter@1.3.1:
     resolution: {integrity: sha512-T0+barUSQRTUQASh8bx02dl+DhF54GtIDY13Y3m9oWTklKbb3Wv974meRpeZ3lp1JpLVECWWNHC4vaG2XHXouQ==}
@@ -2746,6 +2795,10 @@ packages:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
 
+  dependency-graph@1.0.0:
+    resolution: {integrity: sha512-cW3gggJ28HZ/LExwxP2B++aiKxhJXMSIt9K48FOXQkm+vuG5gyatXnLsONRJdzO/7VfjDIiaOOa/bs4l464Lwg==}
+    engines: {node: '>=4'}
+
   destroy@1.2.0:
     resolution: {integrity: sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
@@ -2933,6 +2986,9 @@ packages:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
 
+  estree-walker@2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+
   esutils@2.0.3:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
@@ -3021,6 +3077,10 @@ packages:
   finalhandler@1.2.0:
     resolution: {integrity: sha512-5uXcUVftlQMFnWC9qu/svkWv3GTd2PfUhK/3PLkYNAe7FbqJMt3515HaxE6eRL74GdsriiwujiawdaB1BpEISg==}
     engines: {node: '>= 0.8'}
+
+  find-cache-dir@3.3.2:
+    resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==}
+    engines: {node: '>=8'}
 
   find-cache-dir@4.0.0:
     resolution: {integrity: sha512-9ZonPT4ZAK4a+1pUPVPZJapbi7O5qbbJPdYw/NOQWZZbVLdDTYM3A4R9z/DpAM08IDaFGsvPgiGZ82WEwUDWjg==}
@@ -3340,6 +3400,9 @@ packages:
     resolution: {integrity: sha512-X7rqawQBvfdjS10YU1y1YVreA3SsLrW9dX2CewP2EbBJM4ypVNLDkO5y04gejPwKIY9lR+7r9gn3rFPt/kmWFg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
+  injection-js@2.4.0:
+    resolution: {integrity: sha512-6jiJt0tCAo9zjHbcwLiPL+IuNe9SQ6a9g0PEzafThW3fOQi0mrmiJGBJvDD6tmhPh8cQHIQtCOrJuBfQME4kPA==}
+
   inquirer@8.2.6:
     resolution: {integrity: sha512-M1WuAmb7pn9zdFRtQYk26ZBoY043Sse0wVDdk4Bppr+JOXyQYybdtvK+l9wUibhtjdjvtoiNy8tk+EgsYIUqKg==}
     engines: {node: '>=12.0.0'}
@@ -3366,6 +3429,10 @@ packages:
   is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
+
+  is-builtin-module@3.2.1:
+    resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
+    engines: {node: '>=6'}
 
   is-core-module@2.15.1:
     resolution: {integrity: sha512-z0vtXSwucUJtANQWldhbtbt7BnL0vxiFjIdDLAatwhDYty2bad6s+rijD6Ri4YuYJubLzIJLUidCh09e1djEVQ==}
@@ -3411,6 +3478,9 @@ packages:
 
   is-lambda@1.0.1:
     resolution: {integrity: sha512-z7CMFGNrENq5iFB9Bqo64Xk6Y9sg+epq1myIcdHaGnbMTYOxvzsEtdYqQUylB7LxfkvgrrjP32T6Ywciio9UIQ==}
+
+  is-module@1.0.0:
+    resolution: {integrity: sha512-51ypPSPCoTEIN9dy5Oy+h4pShgJmPCygKfyRCISBI+JoWT/2oJvK8QPxmwv7b/p239jXrm9M1mlQbyKJ5A152g==}
 
   is-network-error@1.1.0:
     resolution: {integrity: sha512-tUdRRAnhT+OtCZR/LxZelH/C7QtjtFrTu5tXCA8pl55eTUElUHT+GPYV8MBMBvea/j+NxQqVt3LbWMRir7Gx9g==}
@@ -3840,6 +3910,10 @@ packages:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
     engines: {node: '>=6'}
 
+  make-dir@3.1.0:
+    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
+    engines: {node: '>=8'}
+
   make-dir@4.0.0:
     resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
     engines: {node: '>=10'}
@@ -4040,6 +4114,19 @@ packages:
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+
+  ng-packagr@18.2.1:
+    resolution: {integrity: sha512-dy9ZDpZb3QpAz+Y/m8VAu7ctr2VrnRU3gmQwJagnNybVJtCsKn3lZA3IW7Z7GTLoG5IALSPouiCgiB/C8ozv7w==}
+    engines: {node: ^18.19.1 || >=20.11.1}
+    hasBin: true
+    peerDependencies:
+      '@angular/compiler-cli': ^18.0.0 || ^18.2.0-next.0
+      tailwindcss: ^2.0.0 || ^3.0.0
+      tslib: ^2.3.0
+      typescript: '>=5.4 <5.6'
+    peerDependenciesMeta:
+      tailwindcss:
+        optional: true
 
   nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
@@ -5493,7 +5580,7 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@angular-devkit/build-angular@18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@types/node@22.5.0)(chokidar@3.6.0)(jest@29.7.0(@types/node@22.5.0))(karma@6.4.4)(typescript@5.5.4)':
+  '@angular-devkit/build-angular@18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(@types/node@22.5.0)(chokidar@3.6.0)(jest@29.7.0(@types/node@22.5.0))(karma@6.4.4)(ng-packagr@18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(tslib@2.7.0)(typescript@5.5.4))(typescript@5.5.4)':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.1802.1(chokidar@3.6.0)
@@ -5563,6 +5650,7 @@ snapshots:
       esbuild: 0.23.0
       jest: 29.7.0(@types/node@22.5.0)(ts-node@10.9.2(@types/node@22.5.0)(typescript@5.5.4))
       karma: 6.4.4
+      ng-packagr: 18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(tslib@2.7.0)(typescript@5.5.4)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@swc/core'
@@ -7120,7 +7208,7 @@ snapshots:
       tsconfig-paths: 4.2.0
       tsconfig-paths-webpack-plugin: 4.1.0
       typescript: 5.3.3
-      webpack: 5.93.0
+      webpack: 5.93.0(esbuild@0.23.0)
       webpack-node-externals: 3.0.0
     transitivePeerDependencies:
       - esbuild
@@ -7330,6 +7418,31 @@ snapshots:
     dependencies:
       '@prisma/debug': 5.18.0
 
+  '@rollup/plugin-json@6.1.0(rollup@4.21.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.0)
+    optionalDependencies:
+      rollup: 4.21.0
+
+  '@rollup/plugin-node-resolve@15.2.3(rollup@4.21.0)':
+    dependencies:
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.0)
+      '@types/resolve': 1.20.2
+      deepmerge: 4.3.1
+      is-builtin-module: 3.2.1
+      is-module: 1.0.0
+      resolve: 1.22.8
+    optionalDependencies:
+      rollup: 4.21.0
+
+  '@rollup/pluginutils@5.1.0(rollup@4.21.0)':
+    dependencies:
+      '@types/estree': 1.0.5
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    optionalDependencies:
+      rollup: 4.21.0
+
   '@rollup/rollup-android-arm-eabi@4.20.0':
     optional: true
 
@@ -7425,6 +7538,12 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.21.0':
     optional: true
+
+  '@rollup/wasm-node@4.21.0':
+    dependencies:
+      '@types/estree': 1.0.5
+    optionalDependencies:
+      fsevents: 2.3.3
 
   '@schematics/angular@18.2.1(chokidar@3.6.0)':
     dependencies:
@@ -7616,6 +7735,8 @@ snapshots:
   '@types/qs@6.9.15': {}
 
   '@types/range-parser@1.2.7': {}
+
+  '@types/resolve@1.20.2': {}
 
   '@types/retry@0.12.2': {}
 
@@ -8051,6 +8172,8 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
+  builtin-modules@3.3.0: {}
+
   bundle-name@4.1.0:
     dependencies:
       run-applescript: 7.0.0
@@ -8200,6 +8323,8 @@ snapshots:
     dependencies:
       delayed-stream: 1.0.0
 
+  commander@12.1.0: {}
+
   commander@2.20.3: {}
 
   commander@4.1.1: {}
@@ -8213,6 +8338,8 @@ snapshots:
       repeat-string: 1.6.1
 
   common-path-prefix@3.0.0: {}
+
+  commondir@1.0.1: {}
 
   component-emitter@1.3.1: {}
 
@@ -8417,6 +8544,8 @@ snapshots:
   depd@1.1.2: {}
 
   depd@2.0.0: {}
+
+  dependency-graph@1.0.0: {}
 
   destroy@1.2.0: {}
 
@@ -8624,6 +8753,8 @@ snapshots:
 
   estraverse@5.3.0: {}
 
+  estree-walker@2.0.2: {}
+
   esutils@2.0.3: {}
 
   etag@1.8.1: {}
@@ -8766,6 +8897,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  find-cache-dir@3.3.2:
+    dependencies:
+      commondir: 1.0.1
+      make-dir: 3.1.0
+      pkg-dir: 4.2.0
+
   find-cache-dir@4.0.0:
     dependencies:
       common-path-prefix: 3.0.0
@@ -8809,7 +8946,7 @@ snapshots:
       semver: 7.6.3
       tapable: 2.2.1
       typescript: 5.3.3
-      webpack: 5.93.0
+      webpack: 5.93.0(esbuild@0.23.0)
 
   form-data@4.0.0:
     dependencies:
@@ -9103,6 +9240,10 @@ snapshots:
 
   ini@4.1.3: {}
 
+  injection-js@2.4.0:
+    dependencies:
+      tslib: 2.7.0
+
   inquirer@8.2.6:
     dependencies:
       ansi-escapes: 4.3.2
@@ -9154,6 +9295,10 @@ snapshots:
     dependencies:
       binary-extensions: 2.3.0
 
+  is-builtin-module@3.2.1:
+    dependencies:
+      builtin-modules: 3.3.0
+
   is-core-module@2.15.1:
     dependencies:
       hasown: 2.0.2
@@ -9183,6 +9328,8 @@ snapshots:
   is-interactive@1.0.0: {}
 
   is-lambda@1.0.1: {}
+
+  is-module@1.0.0: {}
 
   is-network-error@1.1.0: {}
 
@@ -9832,6 +9979,10 @@ snapshots:
       semver: 5.7.2
     optional: true
 
+  make-dir@3.1.0:
+    dependencies:
+      semver: 6.3.1
+
   make-dir@4.0.0:
     dependencies:
       semver: 7.6.3
@@ -10026,6 +10177,36 @@ snapshots:
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
+
+  ng-packagr@18.2.1(@angular/compiler-cli@18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4))(tslib@2.7.0)(typescript@5.5.4):
+    dependencies:
+      '@angular/compiler-cli': 18.2.1(@angular/compiler@18.2.1(@angular/core@18.2.1(rxjs@7.8.1)(zone.js@0.14.10)))(typescript@5.5.4)
+      '@rollup/plugin-json': 6.1.0(rollup@4.21.0)
+      '@rollup/plugin-node-resolve': 15.2.3(rollup@4.21.0)
+      '@rollup/wasm-node': 4.21.0
+      ajv: 8.17.1
+      ansi-colors: 4.1.3
+      browserslist: 4.23.3
+      cacache: 18.0.4
+      chokidar: 3.6.0
+      commander: 12.1.0
+      convert-source-map: 2.0.0
+      dependency-graph: 1.0.0
+      esbuild: 0.23.0
+      fast-glob: 3.3.2
+      find-cache-dir: 3.3.2
+      injection-js: 2.4.0
+      jsonc-parser: 3.3.1
+      less: 4.2.0
+      ora: 5.4.1
+      piscina: 4.6.1
+      postcss: 8.4.41
+      rxjs: 7.8.1
+      sass: 1.77.6
+      tslib: 2.7.0
+      typescript: 5.5.4
+    optionalDependencies:
+      rollup: 4.21.0
 
   nice-napi@1.0.2:
     dependencies:
@@ -11023,15 +11204,6 @@ snapshots:
     optionalDependencies:
       esbuild: 0.23.0
 
-  terser-webpack-plugin@5.3.10(webpack@5.93.0):
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.25
-      jest-worker: 27.5.1
-      schema-utils: 3.3.0
-      serialize-javascript: 6.0.2
-      terser: 5.31.6
-      webpack: 5.93.0
-
   terser-webpack-plugin@5.3.10(webpack@5.94.0):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -11376,37 +11548,6 @@ snapshots:
     dependencies:
       typed-assert: 1.0.9
       webpack: 5.93.0(esbuild@0.23.0)
-
-  webpack@5.93.0:
-    dependencies:
-      '@types/eslint-scope': 3.7.7
-      '@types/estree': 1.0.5
-      '@webassemblyjs/ast': 1.12.1
-      '@webassemblyjs/wasm-edit': 1.12.1
-      '@webassemblyjs/wasm-parser': 1.12.1
-      acorn: 8.12.1
-      acorn-import-attributes: 1.9.5(acorn@8.12.1)
-      browserslist: 4.23.3
-      chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.17.1
-      es-module-lexer: 1.5.4
-      eslint-scope: 5.1.1
-      events: 3.3.0
-      glob-to-regexp: 0.4.1
-      graceful-fs: 4.2.11
-      json-parse-even-better-errors: 2.3.1
-      loader-runner: 4.3.0
-      mime-types: 2.1.35
-      neo-async: 2.6.2
-      schema-utils: 3.3.0
-      tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(webpack@5.93.0)
-      watchpack: 2.4.2
-      webpack-sources: 3.2.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
 
   webpack@5.93.0(esbuild@0.23.0):
     dependencies:
