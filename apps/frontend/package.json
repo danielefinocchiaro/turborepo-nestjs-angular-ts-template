@@ -23,7 +23,7 @@
     "zone.js": "~0.14.0"
   },
   "devDependencies": {
-    "prisma": "workspace:*",
+    "prisma-glob": "workspace:*",
     "@angular-devkit/build-angular": "^18.2.1",
     "@angular/cli": "~18.2.1",
     "@angular/compiler-cli": "^18.2.1",
