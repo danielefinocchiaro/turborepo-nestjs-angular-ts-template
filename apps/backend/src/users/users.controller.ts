@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 // biome-ignore lint/style/useImportType: This is a bug in the ESLint plugin for Nx
 import { UsersService } from './users.service';
-import type { User } from '@prisma/client';
+import type { User } from 'prisma';
 
 @Controller('users')
 export class UsersController {
